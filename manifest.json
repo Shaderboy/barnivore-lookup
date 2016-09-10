@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "barnivore-lookup",
+  "description": "click a piece of text to search it in barnivore",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/link-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "notify-link-clicks-i18n@mozilla.org",
+      "strict_min_version": "46.0a1"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.1.0.min.js", "content-script.js"]
+    }
+  ],
+  
+  "default_locale": "en"
+}
